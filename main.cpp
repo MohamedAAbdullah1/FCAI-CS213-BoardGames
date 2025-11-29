@@ -1,74 +1,59 @@
 #include <iostream>
-#include <ctime>
+#include <string>
+#include <limits>
 #include "BoardGame_Classes.h"
-#include "Numerical_TicTacToe.h"
-#include "Numerical_UI.h"
-#include "Misere_Classes.h"
+#include "Game_Runners.h"
 
 using namespace std;
 
-void run_misere_tictactoe() {
-    Board<char>* board = new Misere_Board();
-    UI<char>* ui = new Misere_UI();
-
-    Player<char>** players = ui->setup_players();
-
-    GameManager<char> gameManager(board, players, ui);
-
-    gameManager.run();
-
-    delete board;
-    delete ui;
-    delete players[0];
-    delete players[1];
-    delete[] players;
+void display_menu() {
+    cout << "\n============================================\n";
+    cout << "           FCAI Board Games Menu            \n";
+    cout << "============================================\n";
+    cout << "Choose a game to play (1-10):\n";
+    cout << "1. X-O\n";
+    cout << "2. SUS\n";
+    cout << "3. Four-in-a-row\n";
+    cout << "4. 5x5 Tic-Tac-Toe\n";
+    cout << "5. Word Tic-Tac-Toe\n";
+    cout << "6. Misere Tic-Tac-Toe\n";
+    cout << "7. Diamond Tic-Tac-Toe\n";
+    cout << "8. 4x4 Tic-Tac-Toe\n";
+    cout << "9. Pyramid Tic-Tac-Toe\n";
+    cout << "10. Numerical Tic-Tac-Toe\n";
+    cout << "0. Exit\n";
+    cout << "Enter your choice: ";
 }
-
-void run_numerical_tictactoe() {
-    Board<int>* board = new Numerical_Board();
-    UI<int>* ui = new Numerical_UI();
-
-    Player<int>** players = ui->setup_players();
-
-    GameManager<int> gameManager(board, players, ui);
-
-    gameManager.run();
-
-    delete board;
-    delete ui;
-    delete players[0];
-    delete players[1];
-    delete[] players;
-}
-
 
 int main() {
+    int choice;
+
     srand(static_cast<unsigned int>(time(0)));
 
-    int choice;
-    cout << "Welcome to FCAI Board Game System\n";
-    cout << "1. Numerical Tic-Tac-Toe (Group Game)\n";
-    cout << "2. Misère Tic Tac Toe (Individual Game)\n";
-    cout << "3. Exit\n";
-    cout << "Enter your choice: ";
-    cin >> choice;
+    do {
+        display_menu();
+        if (!(cin >> choice)) {
+            cout << "Invalid input. Please enter a number.\n";
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            continue;
+        }
 
-    switch (choice) {
-        case 1:
-        {
-            run_numerical_tictactoe();
-            break;
+        switch (choice) {
+            case 1: run_1_xo(); break;
+            case 2: run_2_sus(); break;
+            case 3: run_3_four_in_a_row(); break;
+            case 4: run_4_5x5_tictactoe(); break;
+            case 5: run_5_word_tic_tac_toe(); break;
+            case 6: run_6_misere_tic_tac_toe(); break;
+            case 7: run_7_diamond_tic_tac_toe(); break;
+            case 8: run_8_4x4_tic_tac_toe(); break;
+            case 9: run_9_pyramid_tic_tac_toe(); break;
+            case 10: run_10_numerical_tic_tac_toe(); break;
+            case 0: cout << "Exiting program. Goodbye!\n"; break;
+            default: cout << "Invalid choice. Please enter a number between 0 and 10.\n"; break;
         }
-        case 2:
-        {
-            run_misere_tictactoe();
-            break;
-        }
-        case 3:
-            cout << "Goodbye!\n";
-            break;
-        default:
-            cout << "Invalid choice.\n";
-    }
+    } while (choice != 0);
+
     return 0;
 }
