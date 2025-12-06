@@ -2,7 +2,7 @@
 #define X4X4_CLASSES_H
 
 
-#include "BoardGame_Classes.h"
+#include "../BoardGame_Classes.h"
 
 #include <vector>
 #include <array>

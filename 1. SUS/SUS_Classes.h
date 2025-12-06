@@ -1,7 +1,7 @@
 #ifndef SUS_CLASSES_H
 #define SUS_CLASSES_H
 
-#include"BoardGame_Classes.h"
+#include "../BoardGame_Classes.h"
 
 class SUS_Board:public Board<char>
 {
@@ -16,9 +16,9 @@ public:
 
  bool is_lose(Player<char>*) override { return false; }
 
- bool is_draw(Player<char>* player) override; // تم التعديل
+ bool is_draw(Player<char>* player) override; 
 
- bool game_is_over(Player<char>* player) override; // تم التعديل
+ bool game_is_over(Player<char>* player) override; 
 };
 
 class SUS_UI:public UI<char>
