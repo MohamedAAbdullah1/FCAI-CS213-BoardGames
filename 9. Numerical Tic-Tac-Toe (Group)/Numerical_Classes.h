@@ -1,7 +1,7 @@
 #ifndef NUMERICAL_CLASSES_H
 #define NUMERICAL_CLASSES_H
 
-#include "BoardGame_Classes.h"
+#include "../BoardGame_Classes.h"
 #include <iostream>
 #include <vector>
 #include <algorithm>

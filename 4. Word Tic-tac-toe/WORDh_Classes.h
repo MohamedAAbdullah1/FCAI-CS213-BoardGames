@@ -1,7 +1,7 @@
 #ifndef WORD_CLASSES_H
 #define WORD_CLASSES_H
 
-#include "BoardGame_Classes.h"
+#include "../BoardGame_Classes.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>

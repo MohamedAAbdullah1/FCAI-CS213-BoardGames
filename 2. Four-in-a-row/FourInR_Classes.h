@@ -1,7 +1,7 @@
 #ifndef FOURINR_CLASSES_H
 #define FOURINR_CLASSES_H
 
-#include"BoardGame_Classes.h"
+#include "../BoardGame_Classes.h"
 
 class Four_in_Board:public Board<char>
 {

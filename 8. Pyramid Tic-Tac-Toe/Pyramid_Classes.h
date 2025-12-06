@@ -1,7 +1,7 @@
 #ifndef PYRAMID_CLASSES_H
 #define PYRAMID_CLASSES_H
 
-#include "BoardGame_Classes.h"
+#include "../BoardGame_Classes.h"
 
 #include <vector>
 #include <array>
