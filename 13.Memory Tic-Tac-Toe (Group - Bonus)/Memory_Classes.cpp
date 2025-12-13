@@ -116,7 +116,6 @@ pair<int,int> Memory_Board::compute_best_move(char cpuMark) {
     return {-1, -1};
 }
 
-// ---------------- Memory_UI ----------------
 
 Memory_UI::Memory_UI() : UI<char>("Welcome to Memory Tic-Tac-Toe (hidden marks)", 3) {}
 
