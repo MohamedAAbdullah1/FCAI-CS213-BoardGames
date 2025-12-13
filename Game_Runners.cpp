@@ -15,6 +15,10 @@
 #include "7. 4 x 4 Tic-Tac-Toe/4x4_Classes.h"
 #include "8. Pyramid Tic-Tac-Toe/Pyramid_Classes.h"
 #include "9. Numerical Tic-Tac-Toe (Group)/Numerical_Classes.h"
+#include "10. Obstacles Tic-Tac-Toe (Group)/Teo_Class.h"
+#include "11.Infinity Tic-Tac-Toe (Group)/INFINITY_CLASSES.h"
+#include "12.Ultimate Tic Tac Toe (Group - Bonus)/Ultimate_Classes.h"
+#include "13.Memory Tic-Tac-Toe (Group - Bonus)/Memory_Classes.h"
 
 using namespace std;
 
@@ -116,4 +120,43 @@ void run_10_numerical_tic_tac_toe() {
     GameManager<int> numerical_game(numerical_board, players, game_ui);
     numerical_game.run();
     delete numerical_board; for (int i=0; i<2; ++i) delete players[i]; delete[] players; delete game_ui;
+}
+void run_11_obstacles_tic_tac_toe() {
+    cout << "Starting Obstacles Tic-Tac-Toe Game...\n";
+    UI<char>* game_ui = new Toe_UI();
+    Board<char>* obstacles_board = new Toe_Board();
+    Player<char>** players = game_ui->setup_players();
+    GameManager<char> game(obstacles_board, players, game_ui);
+    game.run();
+    delete obstacles_board; for (int i=0; i<2; ++i) delete players[i]; delete[] players; delete game_ui;
+}
+
+void run_12_infinity_Tic_tac_toe() {
+    cout << "Starting Infinity Tic-Tac-Toe Game...\n";
+    UI<char>* game_ui = new Infinity_UI();
+    Board<char>* infinity_board = new Infinity_Board();
+    Player<char>** players = game_ui->setup_players();
+    GameManager<char> game(infinity_board, players, game_ui);
+    game.run();
+    delete infinity_board; for (int i=0; i<2; ++i) delete players[i]; delete[] players; delete game_ui;
+}
+
+void run_13_Ultimate_tic_tac_toe() {
+    cout << "Starting Ultimate Tic-Tac-Toe Game...\n";
+    UI<char>* game_ui = new Ultimate_UI();
+    Board<char>* Ultimate_board = new Ultimate_Board();
+    Player<char>** players = game_ui->setup_players();
+    GameManager<char> game(Ultimate_board, players, game_ui);
+    game.run();
+    delete Ultimate_board; for (int i=0; i<2; ++i) delete players[i]; delete[] players; delete game_ui;
+}
+
+void run_14_memory_tic_tac_toe() {
+    cout << "Starting 13 Memory Tic-Tac-Toe Game...\n";
+    UI<char>* game_ui = new Memory_UI();
+    Board<char>* memory_board = new Memory_Board();
+    Player<char>** players = game_ui->setup_players();
+    GameManager<char> game(memory_board, players, game_ui);
+    game.run();
+    delete memory_board; for (int i=0; i<2; ++i) delete players[i]; delete[] players; delete game_ui;
 }

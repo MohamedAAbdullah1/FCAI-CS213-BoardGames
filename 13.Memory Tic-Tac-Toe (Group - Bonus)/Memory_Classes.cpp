@@ -1,12 +1,10 @@
 #include "Memory_Classes.h"
 #include <iostream>
 #include <cctype>
-#include <cstdlib>
 #include <ctime>
 
 using namespace std;
 
-// ---------------- Memory_Board ----------------
 
 Memory_Board::Memory_Board() : Board<char>(3, 3) {
     real_board.assign(rows, vector<char>(columns, blank_symbol));

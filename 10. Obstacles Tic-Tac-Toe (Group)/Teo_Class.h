@@ -1,7 +1,7 @@
 #ifndef TEO_CLASS_H
 #define TEO_CLASS_H
 
-#include"BoardGame_Classes.h"
+#include"../BoardGame_Classes.h"
 #include"bits/stdc++.h"
 
 using  namespace  std;

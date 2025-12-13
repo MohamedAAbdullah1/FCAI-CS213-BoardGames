@@ -3,7 +3,7 @@
 
 #include <vector>
 #include <string>
-#include "BoardGame_Classes.h"
+#include "../BoardGame_Classes.h"
 
 class Memory_Board : public Board<char> {
 private:

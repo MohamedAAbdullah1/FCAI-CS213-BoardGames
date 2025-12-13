@@ -12,9 +12,9 @@ using namespace std;
 class Diamond_Board : public Board<char> {
 private:
     char blank_symbol = '.';
-    
+
     bool check_line(int start_r, int start_c, int dr, int dc, int length, char symbol) const;
-    
+
     bool is_valid_diamond_cell(int r, int c) const;
 
 public:
@@ -29,7 +29,7 @@ public:
     bool is_draw(Player<char>* player) override;
 
     bool game_is_over(Player<char>* player) override;
-    
+
     void display_board_matrix() const;
 };
 

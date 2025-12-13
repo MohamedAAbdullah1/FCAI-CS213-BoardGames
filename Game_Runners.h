@@ -17,6 +17,9 @@
 #include "7. 4 x 4 Tic-Tac-Toe/4x4_Classes.h"
 #include "8. Pyramid Tic-Tac-Toe/Pyramid_Classes.h"
 #include "9. Numerical Tic-Tac-Toe (Group)/Numerical_Classes.h"
+#include "10. Obstacles Tic-Tac-Toe (Group)/Teo_Class.h"
+#include "11.Infinity Tic-Tac-Toe (Group)/INFINITY_CLASSES.h"
+#include  "13.Memory Tic-Tac-Toe (Group - Bonus)/Memory_Classes.h"
 
 using namespace std;
 
@@ -30,5 +33,9 @@ void run_7_diamond_tic_tac_toe();
 void run_8_4x4_tic_tac_toe();
 void run_9_pyramid_tic_tac_toe();
 void run_10_numerical_tic_tac_toe();
+void run_11_obstacles_tic_tac_toe();
+void run_12_infinity_Tic_tac_toe();
+void run_13_Ultimate_tic_tac_toe();
+void run_14_memory_tic_tac_toe();
 
 #endif
