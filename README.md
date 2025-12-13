@@ -110,7 +110,7 @@ Instead of random moves, AI players analyze the board to choose optimal actions.
 ### Compile
 
 ```bash
-g++ -std=c++17 main.cpp Game_Runners.cpp -o BoardGames
+g++ -std=c++17 main.cpp Game_Runners.cpp XO/XO_Classes.cpp 1.\ SUS/SUS_Classes.cpp 2.\ Four-in-a-row/FourInR_Classes.cpp 3.\ 5\ x\ 5\ Tic\ Tac\ Toe/game3_Classes.cpp 4.\ Word\ Tic-tac-toe/WORD_Classes.cpp 5.\ Misère\ Tic\ Tac\ Toe/Misere_Classes.cpp 6.\ Diamond\ Tic-Tac-Toe/Diamond_Classes.cpp 7.\ 4\ x\ 4\ Tic-Tac-Toe/4x4_Classes.cpp 8.\ Pyramid\ Tic-Tac-Toe/Pyramid_Classes.cpp 9.\ Numerical\ Tic-Tac-Toe\ \(Group\)/Numerical_Classes.cpp 10.\ Obstacles\ Tic-Tac-Toe\ \(Group\)/Teo_Class.cpp 11.Infinity\ Tic-Tac-Toe\ \(Group\)/INFINITY_CLASSES.cpp 12.Ultimate\ Tic\ Tac\ Toe\ \(Group\ -\ Bonus\)/Ultimate_Classes.cpp 13.Memory\ Tic-Tac-Toe\ \(Group\ -\ Bonus\)/Memory_Classes.cpp  -o BoardGame 
 ```
 
 ### Run
