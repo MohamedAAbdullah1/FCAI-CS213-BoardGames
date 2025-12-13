@@ -2,9 +2,77 @@
 #include <iomanip>
 #include <cctype>
 #include <cstdlib>
+#include <limits>
+#include <vector>
 #include "Misere_Classes.h"
 
 using namespace std;
+
+bool check_win_chk(const vector<vector<char>>& board, int rows, int cols, char symbol) {
+    for (int i = 0; i < rows; ++i) {
+        if (board[i][0] == symbol && board[i][1] == symbol && board[i][2] == symbol) return true;
+    }
+    for (int i = 0; i < cols; ++i) {
+        if (board[0][i] == symbol && board[1][i] == symbol && board[2][i] == symbol) return true;
+    }
+    if (board[0][0] == symbol && board[1][1] == symbol && board[2][2] == symbol) return true;
+    if (board[0][2] == symbol && board[1][1] == symbol && board[2][0] == symbol) return true;
+
+    return false;
+}
+
+bool is_full_chk(const vector<vector<char>>& board, int rows, int cols) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            if (board[i][j] == '.') return false;
+        }
+    }
+    return true;
+}
+
+int minimax(vector<vector<char>>& board, int rows, int cols, bool isMaximizing, char aiSym, char humanSym) {
+    if (check_win_chk(board, rows, cols, aiSym)) {
+        return -10;
+    }
+    if (check_win_chk(board, rows, cols, humanSym)) {
+        return 10;
+    }
+    if (is_full_chk(board, rows, cols)) {
+        return 0;
+    }
+
+    if (isMaximizing) {
+        int bestScore = -1000;
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if (board[i][j] == '.') {
+                    board[i][j] = aiSym;
+                    int score = minimax(board, rows, cols, false, aiSym, humanSym);
+                    board[i][j] = '.';
+                    if (score > bestScore) {
+                        bestScore = score;
+                    }
+                }
+            }
+        }
+        return bestScore;
+    } else {
+        int bestScore = 1000;
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if (board[i][j] == '.') {
+                    board[i][j] = humanSym;
+                    int score = minimax(board, rows, cols, true, aiSym, humanSym);
+                    board[i][j] = '.';
+                    if (score < bestScore) {
+                        bestScore = score;
+                    }
+                }
+            }
+        }
+        return bestScore;
+    }
+}
 
 bool Misere_Board::check_three_in_a_row(char a, char b, char c) {
     return a == b && b == c && a != blank_symbol;
@@ -75,11 +143,46 @@ Move<char>* Misere_UI::get_move(Player<char>* player) {
     }
     else if (player->get_type() == PlayerType::COMPUTER) {
         Board<char>* boardPtr = player->get_board_ptr();
+        int rows = boardPtr->get_rows();
+        int cols = boardPtr->get_columns();
 
-        do {
-            x = rand() % boardPtr->get_rows();
-            y = rand() % boardPtr->get_columns();
-        } while (boardPtr->get_board_matrix()[x][y] != '.');
+        vector<vector<char>> boardMatrix = boardPtr->get_board_matrix();
+
+        char opponentSym = (sym == 'X') ? 'O' : 'X';
+
+        int bestVal = -1000;
+        int bestX = -1;
+        int bestY = -1;
+
+        bool moveFound = false;
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if (boardMatrix[i][j] == '.') {
+                    boardMatrix[i][j] = sym;
+
+                    int moveVal = minimax(boardMatrix, rows, cols, false, sym, opponentSym);
+
+                    boardMatrix[i][j] = '.';
+
+                    if (moveVal > bestVal) {
+                        bestX = i;
+                        bestY = j;
+                        bestVal = moveVal;
+                        moveFound = true;
+                    }
+                }
+            }
+        }
+
+        if (moveFound) {
+            x = bestX;
+            y = bestY;
+        } else {
+             do {
+                x = rand() % rows;
+                y = rand() % cols;
+            } while (boardMatrix[x][y] != '.');
+        }
 
         cout << "\nComputer (" << sym << ") played at: " << x << " " << y << "\n";
     }

@@ -21,6 +21,10 @@ void display_menu() {
     cout << "8. 4x4 Tic-Tac-Toe\n";
     cout << "9. Pyramid Tic-Tac-Toe\n";
     cout << "10. Numerical Tic-Tac-Toe\n";
+    cout << "11. Obstacles Tic-Tac-Toe\n";
+    cout << "12. Infinity Tic-Tac-Toe\n";
+    cout << "13. Ultimate Tic-Tac-Toe\n";
+    cout << "14. Memory Tic-Tac-Toe\n";
     cout << "0. Exit\n";
     cout << "Enter your choice: ";
 }
@@ -50,6 +54,10 @@ int main() {
             case 8: run_8_4x4_tic_tac_toe(); break;
             case 9: run_9_pyramid_tic_tac_toe(); break;
             case 10: run_10_numerical_tic_tac_toe(); break;
+            case 11: run_11_obstacles_tic_tac_toe(); break;
+            case 12: run_12_infinity_Tic_tac_toe(); break;
+            case 13: run_13_Ultimate_tic_tac_toe(); break;
+            case 14: run_14_memory_tic_tac_toe(); break;
             case 0: cout << "Exiting program. Goodbye!\n"; break;
             default: cout << "Invalid choice. Please enter a number between 0 and 10.\n"; break;
         }

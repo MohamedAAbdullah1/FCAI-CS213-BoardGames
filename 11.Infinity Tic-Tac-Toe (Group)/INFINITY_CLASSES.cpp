@@ -6,9 +6,8 @@
 
 using namespace std;
 
-// ---------------- Memory_Board ----------------
 
-Memory_Board::Memory_Board() : Board<char>(3, 3) {
+Infinity_Board::Infinity_Board() : Board<char>(3, 3) {
     rows = 3;
     columns = 3;
     real_board.assign(rows, vector<char>(columns, blank_symbol));
@@ -18,13 +17,13 @@ Memory_Board::Memory_Board() : Board<char>(3, 3) {
     moves_queue.clear();
 }
 
-void Memory_Board::sync_board_matrix() {
+void Infinity_Board::sync_board_matrix() {
     for (int i = 0; i < rows; ++i)
         for (int j = 0; j < columns; ++j)
             board[i][j] = real_board[i][j];
 }
 
-bool Memory_Board::update_board(Move<char>* move) {
+bool Infinity_Board::update_board(Move<char>* move) {
     int x = move->get_x();
     int y = move->get_y();
     char mark = toupper(move->get_symbol());
@@ -42,7 +41,7 @@ bool Memory_Board::update_board(Move<char>* move) {
     return true;
 }
 
-bool Memory_Board::is_win(Player<char>* player) {
+bool Infinity_Board::is_win(Player<char>* player) {
     char sym = toupper(player->get_symbol());
 
     for (int i = 0; i < rows; ++i)
@@ -59,14 +58,14 @@ bool Memory_Board::is_win(Player<char>* player) {
     return false;
 }
 
-bool Memory_Board::is_draw(Player<char>* player) {
+bool Infinity_Board::is_draw(Player<char>* player) {
     for (int i = 0; i < rows; ++i)
         for (int j = 0; j < columns; ++j)
             if (real_board[i][j] == blank_symbol) return false;
     return !is_win(player);
 }
 
-bool Memory_Board::game_is_over(Player<char>* player) {
+bool Infinity_Board::game_is_over(Player<char>* player) {
     return is_win(player) || is_draw(player);
 }
 
@@ -86,7 +85,7 @@ static bool would_win_at(vector<vector<char>>& real_board, int r, int c, char ma
     return win;
 }
 
-pair<int,int> Memory_Board::compute_best_move(char cpuMark) {
+pair<int,int> Infinity_Board::compute_best_move(char cpuMark) {
     cpuMark = toupper(cpuMark);
     char opp = (cpuMark == 'X') ? 'O' : 'X';
 
@@ -124,7 +123,7 @@ pair<int,int> Memory_Board::compute_best_move(char cpuMark) {
     return {-1, -1};
 }
 
-void Memory_Board::process_pending_removals() {
+void Infinity_Board::process_pending_removals() {
     int should_removals = n_moves / 3;
     while (removals_done < should_removals && !moves_queue.empty()) {
         auto t = moves_queue.front();
@@ -139,16 +138,16 @@ void Memory_Board::process_pending_removals() {
 
 // ---------------- Memory_UI ----------------
 
-Memory_UI::Memory_UI() : UI<char>("Welcome to Infinity Tic-Tac-Toe (marks disappear every 3 moves)", 3) {}
+Infinity_UI::Infinity_UI() : UI<char>("Welcome to Infinity Tic-Tac-Toe (marks disappear every 3 moves)", 3) {}
 
-Player<char>* Memory_UI::create_player(string& name, char symbol, PlayerType type) {
+Player<char>* Infinity_UI::create_player(string& name, char symbol, PlayerType type) {
     cout << "Creating " << (type == PlayerType::HUMAN ? "human" : "computer")
          << " player: " << name << " (" << symbol << ")\n";
     return new Player<char>(name, symbol, type);
 }
 
-Move<char>* Memory_UI::get_move(Player<char>* player) {
-    Memory_Board* mb = dynamic_cast<Memory_Board*>(player->get_board_ptr());
+Move<char>* Infinity_UI::get_move(Player<char>* player) {
+    Infinity_Board* mb = dynamic_cast<Infinity_Board*>(player->get_board_ptr());
     if (mb != nullptr) {
         mb->process_pending_removals();
     }

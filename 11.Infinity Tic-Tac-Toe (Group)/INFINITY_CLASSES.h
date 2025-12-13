@@ -5,10 +5,10 @@
 #include <string>
 #include <deque>
 #include <tuple>
-#include "BoardGame_Classes.h"
+#include "../BoardGame_Classes.h"
 
 
-class Memory_Board : public Board<char> {
+class Infinity_Board : public Board<char> {
 private:
     char blank_symbol = '.';
     std::vector<std::vector<char>> real_board;
@@ -19,14 +19,13 @@ private:
     void sync_board_matrix();
 
 public:
-    Memory_Board();
+    Infinity_Board();
 
-    bool update_board(Move<char>* move) ;
-
-    bool is_win(Player<char>* player);
-    bool is_lose(Player<char>* player)  { return false; }
-    bool is_draw(Player<char>* player) ;
-    bool game_is_over(Player<char>* player) ;
+    bool update_board(Move<char>* move) override ;
+    bool is_win(Player<char>* player) override;
+    bool is_lose(Player<char>* player) override { return false; }
+    bool is_draw(Player<char>* player) override ;
+    bool game_is_over(Player<char>* player) override;
 
     std::pair<int,int> compute_best_move(char cpuMark);
 
@@ -34,11 +33,10 @@ public:
     void process_pending_removals();
 };
 
-class Memory_UI : public UI<char> {
+class Infinity_UI : public UI<char> {
 public:
-    Memory_UI();
-    ~Memory_UI() override {}
-
+    Infinity_UI();
+    ~Infinity_UI() override = default;
     Player<char>* create_player(std::string& name, char symbol, PlayerType type) override;
     Move<char>* get_move(Player<char>* player) override;
 };
