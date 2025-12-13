@@ -98,14 +98,15 @@ void Pyramid_UI::display_board_matrix(const vector<vector<char>>& matrix) const 
 
     cout << "\n";
     // Row 0
-    cout << "            | " << matrix[0][2] << " |\n";
-    cout << "       -------------------\n";
+    cout << "    | 0 | 1 | 2 | 3 | 4 |\n";
+    cout << " 0          | " << matrix[0][2] << " |\n";
+    cout << "         ------------\n";
 
     // Row 1
-    cout << "      | " << matrix[1][1] << " | " << matrix[1][2] << " | " << matrix[1][3] << " |\n";
-    cout << "   ---------------------------\n";
+    cout << " 1      | " << matrix[1][1] << " | " << matrix[1][2] << " | " << matrix[1][3] << " |\n";
+    cout << " ------------------------\n";
 
     // Row 2
-    cout << " | " << matrix[2][0] << " | " << matrix[2][1] << " | " << matrix[2][2] << " | " << matrix[2][3] << " | " << matrix[2][4] << " |\n";
+    cout << " 2  | " << matrix[2][0] << " | " << matrix[2][1] << " | " << matrix[2][2] << " | " << matrix[2][3] << " | " << matrix[2][4] << " |\n";
     cout << "\n";
 }

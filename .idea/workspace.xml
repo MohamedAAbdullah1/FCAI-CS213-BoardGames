@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
+    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
+  </component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3ccaadf9-acff-4f48-bdcd-0571a8c28569" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/10. Obstacles Tic-Tac-Toe (Group)/Teo_Class.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/10. Obstacles Tic-Tac-Toe (Group)/Teo_Class.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/13.Memory Tic-Tac-Toe (Group - Bonus)/Memory_Classes.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/13.Memory Tic-Tac-Toe (Group - Bonus)/Memory_Classes.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3. 5 x 5 Tic Tac Toe/game3_Classes.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/3. 5 x 5 Tic Tac Toe/game3_Classes.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6. Diamond Tic-Tac-Toe/Diamond_Classes.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/6. Diamond Tic-Tac-Toe/Diamond_Classes.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6. Diamond Tic-Tac-Toe/Diamond_Classes.h" beforeDir="false" afterPath="$PROJECT_DIR$/6. Diamond Tic-Tac-Toe/Diamond_Classes.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/8. Pyramid Tic-Tac-Toe/Pyramid_Classes.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/8. Pyramid Tic-Tac-Toe/Pyramid_Classes.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="364KdycN39YNlqJajSALoTPUvSG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;C/C++ File.Diamond_Demo.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.Misere_Demo.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.Numerical_Demo.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.XO_Demo.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.main.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;lastedit&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/FCAI-CS213-BoardGames&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Diamond Tic-Tac-Toe" />
+    </key>
+  </component>
+  <component name="RunManager" selected="C/C++ File.main.cpp">
+    <configuration name="Diamond_Demo.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FCAI-CS213-BoardGames" TARGET_NAME="Diamond_Demo.cpp" CONFIG_NAME="Diamond_Demo.cpp">
+      <option name="sourceFile" value="Diamond Tic-Tac-Toe/Diamond_Demo.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Misere_Demo.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FCAI-CS213-BoardGames" TARGET_NAME="Misere_Demo.cpp" CONFIG_NAME="Misere_Demo.cpp">
+      <option name="sourceFile" value="Misere/Misere_Demo.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Numerical_Demo.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FCAI-CS213-BoardGames" TARGET_NAME="Numerical_Demo.cpp" CONFIG_NAME="Numerical_Demo.cpp">
+      <option name="sourceFile" value="$PROJECT_DIR$/Numerical/Numerical_Demo.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="XO_Demo.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FCAI-CS213-BoardGames" TARGET_NAME="XO_Demo.cpp" CONFIG_NAME="XO_Demo.cpp">
+      <option name="sourceFile" value="XO_Demo.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FCAI-CS213-BoardGames" TARGET_NAME="main.cpp" CONFIG_NAME="main.cpp">
+      <option name="sourceFile" value="main.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="C/C++ File.main.cpp" />
+        <item itemvalue="C/C++ File.Diamond_Demo.cpp" />
+        <item itemvalue="C/C++ File.Misere_Demo.cpp" />
+        <item itemvalue="C/C++ File.XO_Demo.cpp" />
+        <item itemvalue="C/C++ File.Numerical_Demo.cpp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3ccaadf9-acff-4f48-bdcd-0571a8c28569" name="Changes" comment="" />
+      <created>1764260497175</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1764260497175</updated>
+      <workItem from="1764260499508" duration="637000" />
+      <workItem from="1764263883357" duration="2076000" />
+      <workItem from="1765035631232" duration="616000" />
+      <workItem from="1765575846366" duration="11499000" />
+      <workItem from="1765589032748" duration="33000" />
+      <workItem from="1765609366899" duration="4005000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

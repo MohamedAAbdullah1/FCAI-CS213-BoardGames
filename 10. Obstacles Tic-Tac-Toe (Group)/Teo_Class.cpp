@@ -25,6 +25,7 @@ bool Toe_Board::update_board(Move<char> *move)
    y = rand() % columns;
    }
    board[x][y]='#';
+   n_moves+=2;
    return true;
   }
  return false;

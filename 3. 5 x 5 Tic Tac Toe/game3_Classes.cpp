@@ -11,14 +11,14 @@ bool GAME3_Board::update_board(Move<char>* move) {
 }
 
 bool GAME3_Board::is_win(Player<char>* player) {
-    if (n_moves == 25) {
+    if (n_moves == 24) {
         return true;
     }
     return false;
 }
 bool GAME3_Board::is_lose(Player<char>* player) { return false; }
-bool GAME3_Board::is_draw(Player<char>* player) { return n_moves == 25; }
-bool GAME3_Board::game_is_over(Player<char>* player) { return n_moves == 25; }
+bool GAME3_Board::is_draw(Player<char>* player) { return n_moves == 24; }
+bool GAME3_Board::game_is_over(Player<char>* player) { return n_moves == 24; }
 
 GAME3_UI::GAME3_UI() : UI<char>("Welcome to 5x5 Tic-Tac-Toe", 3) {}
 Player<char>* GAME3_UI::create_player(string& name, char symbol, PlayerType type) { return new Player<char>(name, symbol, type); }
