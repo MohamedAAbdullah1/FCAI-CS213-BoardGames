@@ -136,10 +136,10 @@ doxygen Doxyfile
 
 ## 👥 Contributors
 
-* **Mohamed A. Abdullah**
+* **Mohamed Abdullah**
 * **Mohamed Ashraf**
 * **Malik Mohamed Ali**
-* **Msiefi41**
+* **Mahmoud Sief**
 
 ---
 
